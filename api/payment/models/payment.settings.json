@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "payment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "credit_card",
+        "debit_card",
+        "pay_pal"
+      ]
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    }
+  }
+}

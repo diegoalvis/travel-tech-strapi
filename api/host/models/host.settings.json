@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hosts",
+  "info": {
+    "name": "host",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "city": {
+      "model": "city"
+    },
+    "trip_type": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.trip-type"
+    }
+  }
+}

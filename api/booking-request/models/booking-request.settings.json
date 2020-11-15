@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_requests",
+  "info": {
+    "name": "booking_request",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "guest_name": {
+      "type": "string"
+    },
+    "guest_email": {
+      "type": "email"
+    },
+    "guest_phone": {
+      "type": "integer"
+    },
+    "destination": {
+      "model": "city"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "host": {
+      "model": "host"
+    },
+    "trip_type": {
+      "type": "component",
+      "repeatable": false,
+      "component": "trip.trip-type"
+    },
+    "payment": {
+      "model": "payment"
+    }
+  }
+}
