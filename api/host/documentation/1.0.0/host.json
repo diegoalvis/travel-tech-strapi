@@ -629,30 +629,28 @@
               }
             }
           },
-          "trip_type": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "casual",
-                    "art_cultural",
-                    "aventure",
-                    "family",
-                    "history"
-                  ]
-                }
+          "trip_types": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -679,32 +677,8 @@
           "city": {
             "type": "string"
           },
-          "trip_type": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "casual",
-                    "art_cultural",
-                    "aventure",
-                    "family",
-                    "history"
-                  ]
-                }
-              }
-            }
+          "trip_types": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

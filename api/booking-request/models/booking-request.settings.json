@@ -32,13 +32,11 @@
     "host": {
       "model": "host"
     },
-    "trip_type": {
-      "type": "component",
-      "repeatable": false,
-      "component": "trip.trip-type"
-    },
     "payment": {
       "model": "payment"
+    },
+    "trip_type": {
+      "model": "trip-type"
     }
   }
 }

@@ -37,10 +37,8 @@
     "city": {
       "model": "city"
     },
-    "trip_type": {
-      "type": "component",
-      "repeatable": true,
-      "component": "trip.trip-type"
+    "trip_types": {
+      "collection": "trip-type"
     }
   }
 }

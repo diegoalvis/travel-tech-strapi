@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/booking-requests": {
+    "/trip-types": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBooking-request"
+                "$ref": "#/components/schemas/NewTrip-type"
               }
             }
           }
         }
       }
     },
-    "/booking-requests/count": {
+    "/trip-types/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "parameters": []
       }
     },
-    "/booking-requests/{id}": {
+    "/trip-types/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBooking-request"
+                "$ref": "#/components/schemas/NewTrip-type"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Booking-request"
+          "Trip-type"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Booking-request": {
+      "Trip-type": {
         "required": [
           "id"
         ],
@@ -535,143 +535,18 @@
           "id": {
             "type": "string"
           },
-          "guest_name": {
+          "name": {
             "type": "string"
           },
-          "guest_email": {
-            "type": "string"
-          },
-          "guest_phone": {
-            "type": "integer"
-          },
-          "destination": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "country_code": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "start_date": {
+          "value": {
             "type": "string",
-            "format": "date"
-          },
-          "end_date": {
-            "type": "string",
-            "format": "date"
-          },
-          "host": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "integer"
-              },
-              "photos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "city": {
-                "type": "string"
-              },
-              "trip_types": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "payment": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "method": {
-                "type": "string"
-              },
-              "customer_name": {
-                "type": "string"
-              },
-              "number": {
-                "type": "integer"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "trip_type": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+            "enum": [
+              "casual",
+              "art_cultural",
+              "aventure",
+              "family",
+              "history"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -679,36 +554,20 @@
           }
         }
       },
-      "NewBooking-request": {
+      "NewTrip-type": {
         "properties": {
-          "guest_name": {
+          "name": {
             "type": "string"
           },
-          "guest_email": {
-            "type": "string"
-          },
-          "guest_phone": {
-            "type": "integer"
-          },
-          "destination": {
-            "type": "string"
-          },
-          "start_date": {
+          "value": {
             "type": "string",
-            "format": "date"
-          },
-          "end_date": {
-            "type": "string",
-            "format": "date"
-          },
-          "host": {
-            "type": "string"
-          },
-          "payment": {
-            "type": "string"
-          },
-          "trip_type": {
-            "type": "string"
+            "enum": [
+              "casual",
+              "art_cultural",
+              "aventure",
+              "family",
+              "history"
+            ]
           },
           "published_at": {
             "type": "string",
