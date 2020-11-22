@@ -37,6 +37,9 @@
     },
     "trip_type": {
       "model": "trip-type"
+    },
+    "total": {
+      "type": "decimal"
     }
   }
 }

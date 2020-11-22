@@ -536,6 +536,9 @@
           "number": {
             "type": "integer"
           },
+          "payment_id": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -557,6 +560,9 @@
           },
           "number": {
             "type": "integer"
+          },
+          "payment_id": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

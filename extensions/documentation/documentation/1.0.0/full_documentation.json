@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/15/2020 4:01:13 PM"
+    "x-generation-date": "11/22/2020 3:20:59 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5627,6 +5627,9 @@
               "trip_types": {
                 "type": "string"
               },
+              "caption": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -5654,6 +5657,9 @@
               },
               "number": {
                 "type": "integer"
+              },
+              "payment_id": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -5691,6 +5697,9 @@
               }
             }
           },
+          "total": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5727,6 +5736,9 @@
           },
           "trip_type": {
             "type": "string"
+          },
+          "total": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -6767,6 +6779,9 @@
               }
             }
           },
+          "caption": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6791,6 +6806,9 @@
             "type": "string"
           },
           "trip_types": {
+            "type": "string"
+          },
+          "caption": {
             "type": "string"
           },
           "published_at": {
@@ -9067,6 +9085,9 @@
           "number": {
             "type": "integer"
           },
+          "payment_id": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9088,6 +9109,9 @@
           },
           "number": {
             "type": "integer"
+          },
+          "payment_id": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

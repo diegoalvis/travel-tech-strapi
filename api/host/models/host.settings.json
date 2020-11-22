@@ -39,6 +39,9 @@
     },
     "trip_types": {
       "collection": "trip-type"
+    },
+    "caption": {
+      "type": "string"
     }
   }
 }

@@ -654,6 +654,9 @@
               }
             }
           },
+          "caption": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -678,6 +681,9 @@
             "type": "string"
           },
           "trip_types": {
+            "type": "string"
+          },
+          "caption": {
             "type": "string"
           },
           "published_at": {

@@ -609,6 +609,9 @@
               "trip_types": {
                 "type": "string"
               },
+              "caption": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -636,6 +639,9 @@
               },
               "number": {
                 "type": "integer"
+              },
+              "payment_id": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -673,6 +679,9 @@
               }
             }
           },
+          "total": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -709,6 +718,9 @@
           },
           "trip_type": {
             "type": "string"
+          },
+          "total": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
