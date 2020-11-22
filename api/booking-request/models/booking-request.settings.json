@@ -32,14 +32,16 @@
     "host": {
       "model": "host"
     },
-    "payment": {
-      "model": "payment"
-    },
     "trip_type": {
       "model": "trip-type"
     },
     "total": {
       "type": "decimal"
+    },
+    "payment": {
+      "type": "component",
+      "repeatable": false,
+      "component": "payment.payment"
     }
   }
 }

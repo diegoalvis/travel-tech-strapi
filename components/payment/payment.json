@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_payment_payments",
+  "info": {
+    "name": "Payment",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "payment_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
